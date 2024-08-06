@@ -1,2 +1,4 @@
-# E-Commerce-Shipping
-Memastikan ketepatan waktu pengiriman produk sangat penting untuk menjaga kepuasan dan loyalitas pelanggan. Perusahaan belum memiliki metode untuk memprediksi dan mencegah keterlambatan ini, yang mengakibatkan kinerja pengiriman yang rendah
+# _Final Project - E-Commerce Shipping_
+Project ini merupakan project akhir dari bootcamp saya di Rakamin Academy Batch 42. Project ini dinobatkan sebagai Runner Up Best Final Project Batch 42.
+
+## Daftar Isi
