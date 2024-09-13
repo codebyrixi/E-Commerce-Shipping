@@ -95,6 +95,19 @@ Selanjutnya adalah tahapan _feature engineering_, yang terdiri dari tahapan-taha
    Pada tahap ini, dilakukan proses pemilihan fitur (feature selection) untuk menghapus fitur yang dianggap tidak relevan atau tidak memberikan kontribusi signifikan terhadap proses modeling. Fitur-fitur yang dihapus antara lain:
 - ID: Fitur ini merupakan identifikasi unik untuk setiap entri, namun tidak memiliki hubungan langsung dengan variabel target dan tidak memberikan informasi yang berguna untuk prediksi.
 - Gender: Setelah dianalisis, fitur 'Gender' tidak menunjukkan pengaruh yang signifikan terhadap ketepatan waktu pengiriman produk dan dianggap tidak relevan dalam konteks analisis ini.
-- Rating: Meskipun 'Rating' mungkin berguna dalam konteks lain, dalam kasus ini fitur ini tidak memiliki pengaruh terhadap variabel yang sedang diprediksi, yaitu ketepatan waktu pengiriman. Oleh karena itu, fitur ini juga dihapus.<br><br>
+- Rating: Meskipun 'Rating' mungkin berguna dalam konteks lain, dalam kasus ini fitur ini tidak memiliki pengaruh terhadap variabel yang sedang diprediksi, yaitu ketepatan waktu pengiriman. Oleh karena itu, fitur ini juga dihapus.
 
-   Penghapusan fitur-fitur tersebut dilakukan untuk menyederhanakan model dan mengurangi noise yang dapat mengganggu performa prediktif, sehingga model lebih fokus pada fitur-fitur yang benar-benar memengaruhi hasil analisis.
+### _Feature Extraction_
+Pada tahap ini, dilakukan proses ekstraksi fitur (feature extraction) untuk menambahkan informasi baru yang relevan ke dalam dataset. Fitur yang diekstraksi adalah Reorder_purchases, berdasarkan jumlah pembelian sebelumnya. Fitur ini memberikan informasi tambahan tentang perilaku pelanggan, khususnya apakah mereka termasuk pelanggan yang sering melakukan pembelian ulang. Data ini berguna dalam analisis untuk melihat apakah ada hubungan antara kebiasaan pelanggan melakukan reorder dan ketepatan waktu pengiriman.
+- Jika jumlah pembelian sebelumnya (prior purchases) >= 3, maka dikategorikan sebagai Yes dengan nilai 1. Ini menunjukkan bahwa pelanggan cenderung melakukan pembelian ulang setelah tiga atau lebih transaksi sebelumnya.
+- Jika jumlah pembelian sebelumnya < 3, maka dikategorikan sebagai No dengan nilai 0. Ini mengindikasikan bahwa pelanggan cenderung belum melakukan pembelian ulang karena riwayat transaksi yang lebih sedikit.
+
+## Data Modelling
+Tahapan selanjutnya adalah melakukan pemodelan data dimana pada penelitian ini akan digunakan lima model, yaitu _Logistic Regression_, _Decision Tree_, _Random Forest_, _Gradient Boosting_, dan _XGBoost_. Hasilnya dapat dilihat pada tabel dibawah ini
+| Metode Machine Learning | Accuracy | Precision | Recall | F1-Score |
+|---|---|---|---|---|
+| Logistic Regression | 0.64 | 0.69 | 0.69 | 0.69 |
+| Gradient Boosting | 0.68 | 0.91 | 0.51 | 0.65 |
+| Decision Tree | 0.66 | 0.74 | 0.65 | 0.69 |
+| Random Forest | 0.64 | 0.71 | 0.66 | 0.69 |
+| XGBoost | 0.69 | 0.89 | 0.53 | 0.66 |
