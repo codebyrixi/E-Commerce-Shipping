@@ -5,6 +5,7 @@ Project ini merupakan project akhir dari bootcamp saya di Rakamin Academy Batch 
 - Overview
 - EDA (_Exploratory Data Analysis_) dan Insight
 - Data Pre-Processing
+- _Feature Engineering_
 - Data Modelling
 - Result and Reccomendation
 
@@ -60,14 +61,31 @@ Solusi yang dapat diusulkan untuk menjaga kepuasan pelanggan mencakup beberapa l
 
 ## Bagian 3: Data Pre-Processing
 Selanjutnya adalah tahapan pre-processing data, yang terdiri dari tahapan-tahapan sebagai berikut.
+
 ### Menangani Missing Value
    <br>Pada tahap ini, dilakukan pengecekan terhadap data untuk mengidentifikasi apakah terdapat missing value atau nilai yang hilang. Setelah dilakukan pemeriksaan menyeluruh, ditemukan bahwa tidak ada missing value dalam dataset, sehingga data dapat langsung digunakan tanpa perlu proses imputasi atau penghapusan nilai kosong.
+   
 ### Menangani Data Duplikat
    <br>Langkah selanjutnya adalah memeriksa adanya data duplikat dalam dataset. Data duplikat dapat menyebabkan distorsi dalam hasil analisis. Setelah proses pengecekan, tidak ditemukan data yang duplikat, sehingga tidak diperlukan tindakan lebih lanjut terkait penghapusan atau penggabungan entri data.
+   
 ### Menangani Nilai Invalid
    <br>Pada tahap ini, data diperiksa untuk mendeteksi adanya nilai invalid, seperti format yang tidak sesuai, nilai di luar rentang yang diharapkan, atau data yang salah input. Setelah pengecekan, tidak ditemukan nilai invalid dalam dataset, sehingga semua data yang ada dinyatakan valid dan dapat digunakan untuk analisis lebih lanjut.
+   
 ### Menangani Outlier
 ![image](https://github.com/user-attachments/assets/b4a0035a-05ec-4131-b83f-f82cac3fdab4)
    Pada tahap ini, outlier diidentifikasi menggunakan metode filtering z-score, di mana nilai absolut lebih besar dari 3 dianggap sebagai outlier. Proses ini dilakukan untuk memastikan bahwa data yang terlalu ekstrem tidak memengaruhi hasil analisis. Sebelum memfilter outlier, dataset memiliki 10.999 baris, dan setelah proses penyaringan, jumlah baris berkurang menjadi 10.642.<br>
-   Selanjutnya, dilakukan perbandingan distribusi nilai pada kolom 'Late' sebelum dan sesudah filter outlier. Distribusi awal untuk kolom 'Late' menunjukkan bahwa 59,67% data bernilai 'Yes' (pengiriman terlambat) dan 40,33% bernilai 'No' (pengiriman tepat waktu). Setelah outlier dihapus, distribusi berubah sedikit menjadi 59,03% 'Yes' dan 40,97% 'No'.<br>
-   Perubahan persentase ini masih tergolong aman dan tidak memengaruhi keseimbangan distribusi secara signifikan. Oleh karena itu, dipertimbangkan untuk tetap mempertahankan outlier yang ada, karena tidak memberikan dampak besar terhadap analisis.
+   Selanjutnya, dilakukan perbandingan distribusi nilai pada kolom 'Late' sebelum dan sesudah filter outlier. Distribusi awal untuk kolom 'Late' menunjukkan bahwa 59,67% data bernilai 'Yes' (pengiriman terlambat) dan 40,33% bernilai 'No' (pengiriman tepat waktu). Setelah outlier dihapus, distribusi berubah sedikit menjadi 59,03% 'Yes' dan 40,97% 'No'. Perubahan persentase ini masih tergolong aman dan tidak memengaruhi keseimbangan distribusi secara signifikan. Oleh karena itu, dipertimbangkan untuk tetap mempertahankan outlier yang ada, karena tidak memberikan dampak besar terhadap analisis.
+
+## Bagian 4: _Feature Engineering_
+Selanjutnya adalah tahapan _feature engineering_, yang terdiri dari tahapan-tahapan sebagai berikut.
+
+### _Feature Transformation_
+   Pada tahap ini, kolom numerik dalam dataset dinormalisasi menggunakan teknik MinMaxScaler. Normalisasi ini bertujuan untuk mengubah nilai-nilai numerik sehingga berada dalam rentang 0 hingga 1, tanpa mengubah distribusi data asli. MinMaxScaler bekerja dengan menggeser dan menskalakan nilai setiap kolom berdasarkan minimum dan maksimum yang ada, sehingga fitur yang memiliki rentang nilai yang berbeda-beda dapat dibandingkan secara adil dan tidak mendominasi fitur lain dalam model analisis.<br>
+   ![image](https://github.com/user-attachments/assets/d32ba1e6-89fd-4f14-9133-4bb33ce1a7bd)
+
+### _Feature Encoding_
+   Pada tahap ini, dilakukan **feature encoding** pada kolom-kolom kategori agar dapat digunakan dalam analisis atau model machine learning. Proses encoding ini bertujuan untuk mengubah data kategori menjadi format numerik yang dapat dipahami oleh algoritma.<br>
+   - **Kolom 'Importance'**<br>
+     Kolom ini mewakili kategori ordinal, di mana terdapat tingkatan atau urutan tertentu antar kategori. Oleh karena itu, diterapkan **Label Encoding** pada kolom ini. Label Encoding akan mengubah setiap kategori menjadi nilai numerik sesuai dengan tingkatannya, misalnya "Low" menjadi 0, "Medium" menjadi 1, dan "High" menjadi 2. Teknik ini cocok digunakan karena pentingnya urutan antar kategori yang mewakili prioritas atau level tertentu.
+   - **Kolom 'Shipment' dan 'Warehouse'**<br>
+     Kolom-kolom ini mewakili kategori nominal, di mana setiap kategori tidak memiliki urutan tertentu. Oleh karena itu, digunakan **One-Hot Encoding**. One-Hot Encoding akan mengonversi setiap kategori dalam kolom 'Shipment' dan 'Warehouse' menjadi kolom baru yang mewakili kategori tersebut dengan nilai biner (0 atau 1). Dengan metode ini, setiap kategori diperlakukan secara independen, tanpa mempengaruhi hubungan antar kategori lain. Hal ini penting agar model tidak salah menafsirkan bahwa ada hubungan hierarki di antara kategori yang seharusnya tidak ada.
