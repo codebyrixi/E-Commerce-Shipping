@@ -59,14 +59,14 @@ Solusi yang dapat diusulkan untuk menjaga kepuasan pelanggan mencakup beberapa l
 2. Untuk barang yang cenderung lebih mahal, dengan harga dalam kisaran 301-350, disarankan agar pengiriman dikelola oleh Warehouse A, D, dan F. Ketiga warehouse ini telah menunjukkan performa yang lebih unggul dalam hal ketepatan waktu pengiriman untuk produk bernilai tinggi, yang dapat memberikan pelayanan lebih baik serta meminimalkan risiko keterlambatan pengiriman bagi barang mahal.
 
 ## Bagian 3: Data Pre-Processing
-Selanjutnya adalah tahapan pre-processing data, yang terdiri dari:
-1. Menangani Missing Value
-   Pada tahap ini, dilakukan pengecekan terhadap data untuk mengidentifikasi apakah terdapat missing value atau nilai yang hilang. Setelah dilakukan pemeriksaan menyeluruh, ditemukan bahwa tidak ada missing value dalam dataset, sehingga data dapat langsung digunakan tanpa perlu proses imputasi atau penghapusan nilai kosong.
-2. Menangani Data Duplikat
-   Langkah selanjutnya adalah memeriksa adanya data duplikat dalam dataset. Data duplikat dapat menyebabkan distorsi dalam hasil analisis. Setelah proses pengecekan, tidak ditemukan data yang duplikat, sehingga tidak diperlukan tindakan lebih lanjut terkait penghapusan atau penggabungan entri data.
-3. Menangani Nilai Invalid
-   Pada tahap ini, data diperiksa untuk mendeteksi adanya nilai invalid, seperti format yang tidak sesuai, nilai di luar rentang yang diharapkan, atau data yang salah input. Setelah pengecekan, tidak ditemukan nilai invalid dalam dataset, sehingga semua data yang ada dinyatakan valid dan dapat digunakan untuk analisis lebih lanjut.
-4. Menangani Outlier
+Selanjutnya adalah tahapan pre-processing data, yang terdiri dari tahapan-tahapan sebagai berikut.
+### Menangani Missing Value
+   <br>Pada tahap ini, dilakukan pengecekan terhadap data untuk mengidentifikasi apakah terdapat missing value atau nilai yang hilang. Setelah dilakukan pemeriksaan menyeluruh, ditemukan bahwa tidak ada missing value dalam dataset, sehingga data dapat langsung digunakan tanpa perlu proses imputasi atau penghapusan nilai kosong.
+### Menangani Data Duplikat
+   <br>Langkah selanjutnya adalah memeriksa adanya data duplikat dalam dataset. Data duplikat dapat menyebabkan distorsi dalam hasil analisis. Setelah proses pengecekan, tidak ditemukan data yang duplikat, sehingga tidak diperlukan tindakan lebih lanjut terkait penghapusan atau penggabungan entri data.
+### Menangani Nilai Invalid
+   <br>Pada tahap ini, data diperiksa untuk mendeteksi adanya nilai invalid, seperti format yang tidak sesuai, nilai di luar rentang yang diharapkan, atau data yang salah input. Setelah pengecekan, tidak ditemukan nilai invalid dalam dataset, sehingga semua data yang ada dinyatakan valid dan dapat digunakan untuk analisis lebih lanjut.
+### Menangani Outlier
 ![image](https://github.com/user-attachments/assets/b4a0035a-05ec-4131-b83f-f82cac3fdab4)
    Pada tahap ini, outlier diidentifikasi menggunakan metode filtering z-score, di mana nilai absolut lebih besar dari 3 dianggap sebagai outlier. Proses ini dilakukan untuk memastikan bahwa data yang terlalu ekstrem tidak memengaruhi hasil analisis. Sebelum memfilter outlier, dataset memiliki 10.999 baris, dan setelah proses penyaringan, jumlah baris berkurang menjadi 10.642.<br>
    Selanjutnya, dilakukan perbandingan distribusi nilai pada kolom 'Late' sebelum dan sesudah filter outlier. Distribusi awal untuk kolom 'Late' menunjukkan bahwa 59,67% data bernilai 'Yes' (pengiriman terlambat) dan 40,33% bernilai 'No' (pengiriman tepat waktu). Setelah outlier dihapus, distribusi berubah sedikit menjadi 59,03% 'Yes' dan 40,97% 'No'.<br>
