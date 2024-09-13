@@ -114,3 +114,18 @@ Tahapan selanjutnya adalah melakukan pemodelan data dimana pada penelitian ini a
 
 
 Dapat terlihat pada tabel bahwa model Decision Tree terbukti menjadi model terbaik dalam analisis yang dilakukan. Model ini menunjukkan performa yang cukup baik dengan nilai Precision sebesar 0.74, yang berarti sebagian besar prediksi pengiriman tepat waktu yang dilakukan oleh model adalah benar. Selain itu, model ini memiliki Recall sebesar 0.65, menunjukkan kemampuan model dalam mendeteksi sebagian besar pengiriman yang terlambat. Nilai F1-score sebesar 0.69 menggambarkan keseimbangan yang baik antara precision dan recall, menjadikan Decision Tree sebagai model yang optimal untuk penelitian ini.
+![image](https://github.com/user-attachments/assets/fdcea381-e90f-41aa-ae28-0476af9243b9)
+
+### _Feature Importance_
+![image](https://github.com/user-attachments/assets/9e9afd56-24cf-45b5-996a-c84946af377e)<br>
+Berdasarkan analisis _feature importance_, fitur-fitur yang paling berpengaruh dalam model ini adalah Weight, Discount, dan Cost. Ketiga fitur ini memberikan insight yang penting untuk memahami faktor-faktor yang memengaruhi keterlambatan pengiriman dalam e-commerce.
+- Weight (berat paket) menunjukkan dampak yang signifikan terhadap ketepatan waktu pengiriman, karena paket yang lebih berat cenderung lebih sulit ditangani oleh logistik.
+- Discount (diskon) juga memainkan peran penting, di mana produk dengan diskon tinggi sering mengalami keterlambatan pengiriman, mungkin karena lonjakan pesanan.
+- Cost (biaya) menunjukkan bahwa harga produk juga memengaruhi ketepatan waktu, di mana barang yang lebih mahal cenderung diprioritaskan dalam pengiriman.
+
+### _Machine Learning Deployment_
+![image](https://github.com/user-attachments/assets/51a0019a-899c-4db2-81d6-94cb1f74fd6f)
+Pada tahap ini, model machine learning diuji dengan melakukan penerapan pada layanan web (web service). Proses ini melibatkan integrasi model ke dalam sistem yang memungkinkan akses dan pengujian oleh klien secara langsung. Dengan menerapkan model pada web service, klien dapat menguji model secara real-time untuk memvalidasi hasil dan efektivitasnya dalam skenario yang lebih luas. Deployment ini memastikan bahwa model yang telah dikembangkan tidak hanya dapat berfungsi dalam lingkungan pengujian tetapi juga dapat memberikan nilai tambah dalam operasi nyata dan pengambilan keputusan berbasis data. Untuk selengkapnya, dapat dilihat dengan melakukan klik [disini](https://final-project-sigma.onrender.com)
+![image](https://github.com/user-attachments/assets/9e0ba532-80ab-4f62-8390-5ac2e4107573)
+
+## Bagian 5: Result & Reccomendation
