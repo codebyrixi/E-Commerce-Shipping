@@ -92,8 +92,9 @@ Selanjutnya adalah tahapan _feature engineering_, yang terdiri dari tahapan-taha
      Kolom-kolom ini mewakili kategori nominal, di mana setiap kategori tidak memiliki urutan tertentu. Oleh karena itu, digunakan **One-Hot Encoding**. One-Hot Encoding akan mengonversi setiap kategori dalam kolom 'Shipment' dan 'Warehouse' menjadi kolom baru yang mewakili kategori tersebut dengan nilai biner (0 atau 1). Dengan metode ini, setiap kategori diperlakukan secara independen, tanpa mempengaruhi hubungan antar kategori lain. Hal ini penting agar model tidak salah menafsirkan bahwa ada hubungan hierarki di antara kategori yang seharusnya tidak ada.
 
 ### _Feature Selection_
-Pada tahap ini, dilakukan proses pemilihan fitur (feature selection) untuk menghapus fitur yang dianggap tidak relevan atau tidak memberikan kontribusi signifikan terhadap proses modeling. Fitur-fitur yang dihapus antara lain:
+   Pada tahap ini, dilakukan proses pemilihan fitur (feature selection) untuk menghapus fitur yang dianggap tidak relevan atau tidak memberikan kontribusi signifikan terhadap proses modeling. Fitur-fitur yang dihapus antara lain:
 - ID: Fitur ini merupakan identifikasi unik untuk setiap entri, namun tidak memiliki hubungan langsung dengan variabel target dan tidak memberikan informasi yang berguna untuk prediksi.
 - Gender: Setelah dianalisis, fitur 'Gender' tidak menunjukkan pengaruh yang signifikan terhadap ketepatan waktu pengiriman produk dan dianggap tidak relevan dalam konteks analisis ini.
 - Rating: Meskipun 'Rating' mungkin berguna dalam konteks lain, dalam kasus ini fitur ini tidak memiliki pengaruh terhadap variabel yang sedang diprediksi, yaitu ketepatan waktu pengiriman. Oleh karena itu, fitur ini juga dihapus.<br>
-Penghapusan fitur-fitur tersebut dilakukan untuk menyederhanakan model dan mengurangi noise yang dapat mengganggu performa prediktif, sehingga model lebih fokus pada fitur-fitur yang benar-benar memengaruhi hasil analisis.
+
+   Penghapusan fitur-fitur tersebut dilakukan untuk menyederhanakan model dan mengurangi noise yang dapat mengganggu performa prediktif, sehingga model lebih fokus pada fitur-fitur yang benar-benar memengaruhi hasil analisis.
