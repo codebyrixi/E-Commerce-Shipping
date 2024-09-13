@@ -10,7 +10,7 @@ Project ini merupakan project akhir dari bootcamp saya di Rakamin Academy Batch 
 
 ## Bagian 0: Fun Facts
 Dilansir dari situs iPrice.com, para konsumen di Indonesia harus menunggu hingga 3.8 hari untuk menerima paket tersebut disaat Thailand hanya menunggu 2.5 hari untuk paket mereka.
-![image](https://github.com/user-attachments/assets/b351c222-c2c2-4e12-99cf-6d4c0f8740dc)
+![image](https://github.com/user-attachments/assets/b351c222-c2c2-4e12-99cf-6d4c0f8740dc)<br>
 Hal inilah yang menyebabkan >90% konsumen di Indonesia memberikan keluhan dikarenakan paket mereka terlambat untuk diterima
 ![image](https://github.com/user-attachments/assets/687cc646-3070-4d2d-b573-a5276c3969f4)
 
