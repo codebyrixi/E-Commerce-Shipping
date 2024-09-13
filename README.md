@@ -18,8 +18,8 @@ Hal inilah yang menyebabkan >90% konsumen di Indonesia memberikan keluhan dikare
 
 ### Problem Statement
 Memastikan ketepatan waktu pengiriman produk sangat penting untuk menjaga kepuasan dan loyalitas pelanggan. Namun, saat ini, persentase pengiriman barang yang tepat waktu sangat rendah, hanya mencapai 40%. Hal ini menunjukkan bahwa perusahaan belum memiliki metode yang efektif untuk memprediksi dan mencegah keterlambatan dalam pengiriman. Akibatnya, kinerja pengiriman yang rendah terus berlanjut dan dapat memengaruhi kepuasan pelanggan serta reputasi perusahaan.
-![image](https://github.com/user-attachments/assets/76dae04a-639e-4213-9066-360610c8d94d)
-Dapat dilihat pada tabel berikut bahwa tersapat lebih banyak paket dengan status _Late (1)_ (bar sebelah kanan) dibandingkan dengan paket yang berstatus _On Time (0)_ (bar sebelah kiri). Kembali lagi, Hal ini menunjukkan bahwa perusahaan belum memiliki metode yang efektif untuk memprediksi dan mencegah keterlambatan dalam pengiriman. Akibatnya, kinerja pengiriman yang rendah terus berlanjut dan dapat memengaruhi kepuasan pelanggan serta reputasi perusahaan.
+![image](https://github.com/user-attachments/assets/c565e135-175a-4350-b04c-c5d71d0cfac1)
+Dapat dilihat pada grafik berikut bahwa tersapat lebih banyak paket dengan status _Late (1)_ (bar sebelah kanan) dibandingkan dengan paket yang berstatus _On Time (0)_ (bar sebelah kiri). Kembali lagi, Hal ini menunjukkan bahwa perusahaan belum memiliki metode yang efektif untuk memprediksi dan mencegah keterlambatan dalam pengiriman. Akibatnya, kinerja pengiriman yang rendah terus berlanjut dan dapat memengaruhi kepuasan pelanggan serta reputasi perusahaan.
 
 ### Goal and Objectives
 #### Goal
@@ -29,3 +29,5 @@ Penelitian ini memiliki tiga tujuan utama yang saling berkaitan untuk meningkatk
 1. Penelitian ini bertujuan untuk mengidentifikasi faktor-faktor yang mempengaruhi keterlambatan pengiriman produk. Dengan memahami variabel-variabel yang memengaruhi keterlambatan, seperti kondisi cuaca, lokasi pengiriman, atau efisiensi logistik, perusahaan dapat memperoleh wawasan yang lebih dalam tentang penyebab utama dari masalah keterlambatan tersebut.
 2. Penelitian ini akan membangun model machine learning yang bertujuan untuk memprediksi apakah sebuah produk akan terdeliver tepat waktu atau tidak. Model ini akan dikembangkan berdasarkan data historis pengiriman dan berbagai faktor yang telah diidentifikasi, sehingga perusahaan dapat memprediksi kemungkinan keterlambatan pengiriman dengan lebih akurat dan dapat mengantisipasinya sebelum terjadi.
 3. Berdasarkan hasil analisis data pengiriman dan prediksi dari model machine learning, penelitian ini akan merekomendasikan solusi yang praktis dan efektif untuk mengatasi masalah keterlambatan pengiriman. Solusi ini akan berlandaskan pada wawasan bisnis (_business insight_) yang diperoleh dari analisis data, dan diharapkan dapat membantu perusahaan dalam merancang strategi yang lebih baik untuk meningkatkan efisiensi operasional serta ketepatan waktu pengiriman produk.
+
+### Data Overview
