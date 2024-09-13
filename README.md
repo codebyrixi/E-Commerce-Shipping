@@ -95,6 +95,6 @@ Selanjutnya adalah tahapan _feature engineering_, yang terdiri dari tahapan-taha
    Pada tahap ini, dilakukan proses pemilihan fitur (feature selection) untuk menghapus fitur yang dianggap tidak relevan atau tidak memberikan kontribusi signifikan terhadap proses modeling. Fitur-fitur yang dihapus antara lain:
 - ID: Fitur ini merupakan identifikasi unik untuk setiap entri, namun tidak memiliki hubungan langsung dengan variabel target dan tidak memberikan informasi yang berguna untuk prediksi.
 - Gender: Setelah dianalisis, fitur 'Gender' tidak menunjukkan pengaruh yang signifikan terhadap ketepatan waktu pengiriman produk dan dianggap tidak relevan dalam konteks analisis ini.
-- Rating: Meskipun 'Rating' mungkin berguna dalam konteks lain, dalam kasus ini fitur ini tidak memiliki pengaruh terhadap variabel yang sedang diprediksi, yaitu ketepatan waktu pengiriman. Oleh karena itu, fitur ini juga dihapus.<br>
+- Rating: Meskipun 'Rating' mungkin berguna dalam konteks lain, dalam kasus ini fitur ini tidak memiliki pengaruh terhadap variabel yang sedang diprediksi, yaitu ketepatan waktu pengiriman. Oleh karena itu, fitur ini juga dihapus.<br><br>
 
    Penghapusan fitur-fitur tersebut dilakukan untuk menyederhanakan model dan mengurangi noise yang dapat mengganggu performa prediktif, sehingga model lebih fokus pada fitur-fitur yang benar-benar memengaruhi hasil analisis.
